@@ -24,12 +24,12 @@ O projeto foca em resolver desafios reais de comunicação assíncrona, como a s
 **✅Solução:** Foi necessário alterar o group-id do Consumer (de comconsumerNotificacaoGroup para comconsumerNotificacaoGroupV2). Isso forçou o Kafka a criar um novo registro de leitura, fazendo com que o Consumidor ignorasse os offsets antigos e começasse a ler apenas as novas mensagens (com as correções já aplicadas).
 
 # Tecnólogias Utilizadas
-**- Java 17+**
-**- SpringBoot**
-**- Docker**
-**- Kafka**
-**- MYSQL**
-**- Zookeper**
+- Java 17+
+- SpringBoot
+- Docker
+- Kafka
+- MYSQL
+- Zookeper
 
 # Como Executar o Projeto
 
@@ -49,5 +49,6 @@ Producer (API): http://localhost:8080/notificacao/testekafka
 
 
 Consumer (Listener): http://localhost:8081 (Disponível apenas para inspeção, não possui endpoints externos).
+
 
 
