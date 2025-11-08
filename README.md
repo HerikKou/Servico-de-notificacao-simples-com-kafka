@@ -19,7 +19,7 @@ O projeto foca em resolver desafios reais de comunicação assíncrona, como a s
 
 **Reinício Teimoso do Consumidor**
 
-**O Desafio:** Após aplicar a correção de mapeamento, o Consumidor continuava a falhar, pois ficava preso tentando reprocessar mensagens antigas e corrompidas, mesmo após limpar os volumes.
+**🧠Desafio:** Após aplicar a correção de mapeamento, o Consumidor continuava a falhar, pois ficava preso tentando reprocessar mensagens antigas e corrompidas, mesmo após limpar os volumes.
 
 **✅Solução:** Foi necessário alterar o group-id do Consumer (de comconsumerNotificacaoGroup para comconsumerNotificacaoGroupV2). Isso forçou o Kafka a criar um novo registro de leitura, fazendo com que o Consumidor ignorasse os offsets antigos e começasse a ler apenas as novas mensagens (com as correções já aplicadas).
 
@@ -49,4 +49,5 @@ Producer (API): http://localhost:8080/notificacao/testekafka
 
 
 Consumer (Listener): http://localhost:8081 (Disponível apenas para inspeção, não possui endpoints externos).
+
 
